@@ -21,10 +21,6 @@ namespace {{cookiecutter.service_name}}
 {
     public class {{cookiecutter.service_name}} : ServiceBase<{{cookiecutter.service_name}}Config>
     {
-        public override IReadOnlyList<IDiscordCommand> DiscordCommands { get; } = DiscordCommandLoader.GetCommands(Assembly.GetExecutingAssembly());
-
-        public override IReadOnlyList<IConsoleCommand> ConsoleCommands { get; } = ConsoleCommandLoader.GetCommands(Assembly.GetExecutingAssembly());
-
         public override ServiceInfo Info { get; } = new ServiceInfo()
         {
             Author = "{{cookiecutter.author}}",
