@@ -30,6 +30,7 @@ namespace {{cookiecutter.service_name}}
             Author = "{{cookiecutter.author}}",
             Name = "Template",
             Version = new Version(1, 0, 0, 0),
+
             // GithubRepositoryUrl = "https://github.com/{{cookiecutter.author}}/{{cookiecutter.service_name}}",
         };
 
