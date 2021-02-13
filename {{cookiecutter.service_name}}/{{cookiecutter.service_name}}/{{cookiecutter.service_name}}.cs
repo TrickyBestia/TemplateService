@@ -6,16 +6,10 @@
 // -----------------------------------------------------------------------
 
 using System;
-using System.Collections.Generic;
-using System.Reflection;
 using System.Threading.Tasks;
 
 using TrickyBot.API.Abstract;
 using TrickyBot.API.Features;
-using TrickyBot.Services.ConsoleCommandService.API.Features;
-using TrickyBot.Services.ConsoleCommandService.API.Interfaces;
-using TrickyBot.Services.DiscordCommandService.API.Features;
-using TrickyBot.Services.DiscordCommandService.API.Interfaces;
 
 namespace {{cookiecutter.service_name}}
 {
