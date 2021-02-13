@@ -28,7 +28,7 @@ namespace {{cookiecutter.service_name}}
         public override ServiceInfo Info { get; } = new ServiceInfo()
         {
             Author = "{{cookiecutter.author}}",
-            Name = "Template",
+            Name = "{{cookiecutter.service_name}}",
             Version = new Version(1, 0, 0, 0),
 
             // GithubRepositoryUrl = "https://github.com/{{cookiecutter.author}}/{{cookiecutter.service_name}}",
