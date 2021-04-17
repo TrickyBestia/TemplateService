@@ -20,6 +20,9 @@ jobs:
         with:
           ref: template
       
+      - name: Setup tmate session
+        uses: mxschmitt/action-tmate@v3
+
       - name: Create template
         run: .$RUNNER_TEMP/create_template.py
       
