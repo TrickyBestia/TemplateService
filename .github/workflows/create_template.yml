@@ -20,16 +20,14 @@ jobs:
         with:
           ref: template
 
-      - name: Setup tmate session
-        uses: mxschmitt/action-tmate@v3
-
       - name: Create template
         run: python $RUNNER_TEMP/create_template.py
       
       - name: Copy template to current directory
         run: cp -r $RUNNER_TEMP/template/* .
 
-      - name: Commit & push
-        uses: actions-js/push@master
+      - uses: EndBug/add-and-commit@v7.0.0
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: template
+          author_name: github-actions
+          author_email: 41898282+github-actions[bot]@users.noreply.github.com
