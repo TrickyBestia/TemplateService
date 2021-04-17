@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project>
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <LangVersion>9.0</LangVersion>
+    <PlatformTarget>anycpu</PlatformTarget>
+    <Version>1.0.0</Version>
+    <Company>{{cookiecutter.author}}</Company>
+    <Copyright>Copyright (c) {{cookiecutter.author}} $([System.DateTime]::Now.ToString("yyyy"))</Copyright>
+    <RepositoryType>Git</RepositoryType>
+    <RepositoryUrl>https://github.com/{{cookiecutter.author}}/{{cookiecutter.service_name}}</RepositoryUrl>
+    <NoWarn>IDE0090;IDE0057</NoWarn>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Release'">
+    <TreatWarningsAsErrors>True</TreatWarningsAsErrors>
+    <DebugType>None</DebugType>
+  </PropertyGroup>
+</Project>
