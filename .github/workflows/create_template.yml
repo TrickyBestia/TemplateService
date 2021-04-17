@@ -1,0 +1,32 @@
+name: Create template CI
+
+on: [push, pull_request]
+
+jobs:
+  create_template:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Pull repository
+        uses: actions/checkout@v2.3.1
+
+      - name: Copy all to temp folder
+        run: |
+          cp -r * $RUNNER_TEMP
+          rm -rf *
+
+      - name: Checkout 'template'
+        uses: actions/checkout@v2.3.1
+        with:
+          ref: template
+      
+      - name: Create template
+        run: .$RUNNER_TEMP/create_template.py
+      
+      - name: Copy template to current directory
+        run: cp -r $RUNNER_TEMP/template/* .
+
+      - name: Commit & push
+        uses: actions-js/push@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
