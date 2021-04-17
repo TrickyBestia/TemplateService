@@ -2,13 +2,14 @@
     "$schema": "https://raw.githubusercontent.com/DotNetAnalyzers/StyleCopAnalyzers/master/StyleCop.Analyzers/StyleCop.Analyzers/Settings/stylecop.schema.json",
     "settings": {
         "documentationRules": {
-            "companyName": "{{cookiecutter.author}}",
+            "companyName": "AuthorName",
             "copyrightText": "Copyright (c) {companyName}. All rights reserved.\nLicensed under the {licenseName} license.",
             "headerDecoration": "-----------------------------------------------------------------------",
             "variables": {
-                "licenseFile": "LICENSE.txt",
+                "licenseFile": "LICENSE",
                 "licenseName": "CC BY-ND 4.0"
-            }
+            },
+            "documentationCulture": "ru-RU"
         },
         "indentation": {
             "useTabs": false,
