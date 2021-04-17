@@ -1,6 +1,7 @@
 #!/usr/bin/python
 from pathlib import Path
 import os
+import sys
 
 REPLACEMENTS = {'AuthorName': '{{cookiecutter.author}}',
                 'TemplateService': '{{cookiecutter.service_name}}'}
@@ -12,6 +13,7 @@ def replace(text):
     return text
 
 
+os.chdir(sys.path[0])
 for root, _, files in os.walk('TemplateService'):
     os.makedirs(replace(root))
     for file in [os.path.join(root, file) for file in files]:
